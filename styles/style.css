@@ -8,7 +8,7 @@ font-family: 'Merriweather Sans', sans-serif; */
     --darkgreentran: #374D43;
     --lightgreen: #C3D884;
     --white: #FBFCF2;
-    --sage: #769D84;
+    --sage: #A6C1B0;
     --black: #151824;
 }
 
@@ -16,7 +16,7 @@ font-family: 'Merriweather Sans', sans-serif; */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Merriweather Sans', sans-serif;    
+    font-family: 'Merriweather Sans', sans-serif;
 }
 
 body {
@@ -35,13 +35,16 @@ nav {
 .logo {
     width: 320px;
     height: auto;
-
+    position: absolute;
+    margin: 27px 0px 0px 24px;
+    left: 0;
 }
 
 #menu-btn {
+    display: flex;
     position: absolute;
     width: 32px;
-    right: 30px;
+    right: 20px;
     background-color: transparent;
     border: none;
 }
@@ -51,18 +54,32 @@ nav {
     border: none;
 }
 
-nav a {
+nav ul {
+    display: flex;
+    flex-direction: column;
+}
+
+nav li {
+    list-style: none;
+}
+
+nav li a {
     color: var(--white);
     text-decoration: none;
     font-size: 26px;
     text-align: center;
-    display: block;
+    display: flex;
+    justify-content: center;
     margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 10px;
 }
 
 nav a:hover {
-    color:var(--lightgreen)
+    color: var(--lightgreen)
 }
+
+/* language dropdown */
 
 .dropdown {
     display: flex;
@@ -70,22 +87,22 @@ nav a:hover {
     justify-content: center;
 }
 
-.dropdown-content{
+.dropdown-content {
     position: absolute;
     display: flex;
     flex-direction: row;
     width: 150px;
     height: 150px;
-    display: none; 
+    display: none;
     z-index: 1;
     justify-content: flex-start;
     margin-top: 50px;
 }
 
-.dropdown-content img{
+.dropdown-content img {
     position: absolute;
     display: inline;
-   margin-top: 20px;
+    margin-top: 20px;
     left: 20px;
 }
 
@@ -94,24 +111,98 @@ nav a:hover {
     position: absolute;
 }
 
-.dropdown:hover .dropdown-content{
+.dropdown:hover .dropdown-content {
     display: block;
     background-color: var(--darkgreentran);
 
+}
+
+@media (min-width:768px) {
+    nav {
+        width: 100%;
+        flex-direction: row;
+        justify-content: end;
+    }
+
+    .logo {
+        width: 250px;
+    }
+
+    .menu {
+        display: flex;
+    }
+
+    nav ul {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    nav li a {
+        font-size: 20px;
+    }
+
+    #menu-btn {
+        display: none;
+    }
+
+    .lang-btn {
+        margin-left: 10px;
+    }
+
+    .lang-btn img {
+        width: 25px;
+    }
+}
+
+@media (min-width:1024px) {
+    nav {
+        width: 100%;
+        height: 94px;
+        flex-direction: row;
+        justify-content: end;
+        padding: 0 70px 0 70px;
+        align-items: center;
+    }
+
+    .logo {
+        width: 320px;
+        margin: 5px 0 0 70px;
+    }
+
+    .menu {
+        display: flex;
+    }
+
+    nav ul {
+        flex-direction: row;
+        gap: 30px;
+    }
+
+    #menu-btn {
+        display: none;
+    }
+
+    .lang-btn {
+        margin-left: 20px;
+    }
+
+    .lang-btn img {
+        width: 32px;
+    }
 }
 
 /* ----- */
 
 /* Hero */
 
-.hero img{
+.hero img {
     width: 100%;
     height: auto;
     z-index: 0;
     position: absolute;
 }
 
-.hero h1{
+.hero h1 {
     display: block;
     position: relative;
     z-index: 1;
@@ -122,7 +213,7 @@ nav a:hover {
     text-align: center;
     padding: 140px 24px 30px 24px;
     width: 100%;
-    
+
 }
 
 .hero p {
@@ -166,7 +257,7 @@ nav a:hover {
     margin-top: 75px;
 }
 
-.download-img-1 img{
+.download-img-1 img {
     width: 9.7rem;
     height: auto;
     margin-top: 6px;
@@ -174,7 +265,7 @@ nav a:hover {
     margin-top: 25px;
 }
 
-.download-img-2 img{
+.download-img-2 img {
     width: 10.475rem;
     height: auto;
     right: 24px;
@@ -189,5 +280,15 @@ nav a:hover {
 
 .hvorfor {
     width: 100%;
-    
+    height: 300px;
+    margin-top: 700px;
+    background-color: var(--sage);
+}
+
+.hvorfor h2 {
+    color: var(--black);
+    font-family: 'Merriweather', serif;
+    font-size: 32px;
+    font-weight: 400;
+
 }
