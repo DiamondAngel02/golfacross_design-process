@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@400;700&family=Merriweather:wght@400;700&display=swap');
+
+/* font-family: 'Merriweather', serif;
+font-family: 'Merriweather Sans', sans-serif; */
+
+:root {
+    --darkgreen: #0C2E1E;
+    --lightgreen: #C3D884;
+    --white: #FBFCF2;
+    --sage: #769D84;
+    --black: #151824;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather Sans', sans-serif;
+}
+
+nav {
+    position: relative;
+    background-color: var(--darkgreen);
+    padding: 24px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+}
+
+.logo {
+    width: 320px;
+    height: auto;
+
+}
+
+#menu-btn {
+    position: absolute;
+    width: 32px;
+    margin-left: 1px;
+    margin-top: 5px;
+    background-color: transparent;
+    border: none;
+}
+
+.lang-btn {
+    background-color: transparent;
+    border: none;
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 26px;
+    text-align: center;
+    display: block;
+}
+
+nav a:hover {
+    color:var(--lightgreen)
+}
+
+.dropdown {
+    display: flex;
+    justify-content: center;
+}
+
+.dropdown-content{
+    display: none;
+}

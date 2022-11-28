@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="da">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,14 +10,38 @@
     <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
     <link rel="stylesheet" href="styles/style.css">
 </head>
+
 <body>
     <nav>
-        <img src="" alt="">     
-        <a href="/pages/index.html">hem</a>
-        <a href="/pages/omos.html">om os</a>
-        <a href="/pages/konto.html">konto</a>
-        <a href="/pages/anmendelser.html">anmendelser</a>
+        <img src="/img/logo.svg" alt="GolfAcross Logo" class="logo">
+<button id="menu-btn">
+                <img src="/img/icon-arrow-down.svg" alt="arrow down">
+            </button>
+       
+            
+            <div class="menu">
+                <a href="/pages/index.html">hem</a>
+                <a href="/pages/omos.html">om os</a>
+                <a href="/pages/konto.html">konto</a>
+                <a href="/pages/anmendelser.html">anmendelser</a>
+                <div class="dropdown">
+                    <button class="lang-btn">
+                        <img src="/img/dansk-f.svg" alt="dansk flag">
+                        <img src="/img/icon-arrow-down.svg" alt="arrow down">
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#"><img src="/img/dansk-f.svg" alt="dansk flag">
+                        <p>DA</p></a>
+                        <a href="#"><img src="/img/engelsk-f.svg" alt="engelsk flag">
+                        <p>EN</p></a>
+                    </div>
+                </div>
+            </div>
+       
+
+
     </nav>
 
 </body>
+
 </html>
