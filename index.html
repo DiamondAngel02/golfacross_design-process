@@ -10,17 +10,26 @@
     <!-- favicon -->
     <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
     <link rel="stylesheet" href="styles/style.css">
+
+
+
 </head>
 
 <body>
     <nav class="navbar">
-        <img src="/img/logo.svg" alt="GolfAcross Logo" class="logo">
-        <a href="#" id="menu-btn">
-            <img src="/img/icon-arrow-down.svg" alt="arrow down">
+        <a href="index.html" class="logo">
+             <img src="/img/logo.svg" alt="GolfAcross Logo" class="logo">
         </a>
+       
+        <div class="navbar__toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+            </div>
+
         <div class="menu">
             <ul>
-                <li><a href="/pages/index.html">hem</a></li>
+                <li><a href="index.html">hem</a></li>
                 <li><a href="/pages/omos.html">om os</a></li>
                 <li><a href="/pages/konto.html">konto</a></li>
                 <li><a href="/pages/anmendelser.html">anmendelser</a></li>
@@ -32,18 +41,25 @@
                     <img src="/img/icon-arrow-down.svg" alt="arrow down">
                 </button>
                 <div class="dropdown-content">
-                    <a href="#"><img src="/img/dansk-f.svg" alt="dansk flag">
+                    <div class="da">
+                        <a href="#"><img src="/img/dansk-f.svg" alt="dansk flag">
                         <p>DA</p>
                     </a>
-                    <a href="#"><img src="/img/engelsk-f.svg" alt="engelsk flag">
+                    </div>
+                    <div class="en">
+                         <a href="#"><img src="/img/engelsk-f.svg" alt="engelsk flag">
                         <p>EN</p>
                     </a>
+                    </div>
+                   
                 </div>
             </div>
         </div>
+
+
     </nav>
 
-    <section class="hero">
+    <!-- <section class="hero"> 
         <img src="/img/bg-s.jpg" alt="">
         <h1>Leder du efter en lille ledsager <br> ude på banen?
         </h1>
@@ -78,8 +94,17 @@
             <p></p>
 
         </div>
-    </section>
-
+    </section> -->
+    <script>
+        const menu = document.querySelector('#mobile-menu');
+        const links = document.querySelector('.menu')
+        // Display mobile menu
+        const mobileMenu = () =>{
+        menu.classList.toggle('is-active')
+        links.classList.toggle('active')
+        }
+        menu.addEventListener('click', mobileMenu)
+        </script>
 </body>
 
 </html>
