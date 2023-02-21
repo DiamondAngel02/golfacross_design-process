@@ -50,9 +50,9 @@ nav {
 
 /* needs to toggle */
 .navbar__toggle .bar{
-    width: 28px;
+    width: 32px;
     height: 3px;
-    margin: 5px auto;
+    margin: auto;
     transition: all 0.3s ease;
     background: var(--white);
 }
